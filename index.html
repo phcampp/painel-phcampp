@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Pedro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: #00ff00;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1, h2 {
+      margin: 20px 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+    }
+    input[type="text"], input[type="password"], button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #00ff00;
+      background-color: black;
+      color: #00ff00;
+      border-radius: 5px;
+    }
+    input[type="text"]::placeholder, input[type="password"]::placeholder {
+      color: #00ff00;
+    }
+    button {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #00ff00;
+      color: black;
+    }
+    .message {
+      display: none;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem vindo(a)! ao Painel do Pedro.</h1>
+  <p>Este site foi criado com o propósito de ser usado para o bem. Use-o com responsabilidade!</p>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <div class="message" id="loginMessage">
+      ✅ Login Liberado!
+      <h2>Busca de Dados</h2>
+      <input type="text" id="dataInput" placeholder="Puxar Dados">
+      <button onclick="search()">Buscar</button>
+      <p id="searchMessage"></p>
+    </div>
+  </div>
+  <footer>
+    © 2024 Pedro - Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function login() {
+      const loginMessage = document.getElementById("loginMessage");
+      loginMessage.style.display = "block";
+    }
+
+    function search() {
+      const searchMessage = document.getElementById("searchMessage");
+      searchMessage.innerHTML = "Deu tudo certo! Agora verifique seu email.";
+    }
+  </script>
+</body>
+</html>
